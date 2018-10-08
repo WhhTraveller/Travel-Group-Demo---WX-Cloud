@@ -1,0 +1,17 @@
+<!--pages/userCenter/publishTravel/publishTravel.wxml-->
+<view class='container'>
+  <view class='images'>
+    <block wx:if="{{picCount}}" wx:for="{{picArray}}" wx:for-item="pic" wx:key="*this">
+      <image src='{{pic}}' mode='aspectFill' style='width:{{windowWidth/3-15}}px;height:{{windowWidth/3-15}}px'></image>
+    </block>
+    <view wx:if="{{picCount<6}}" class='addImgButton' style='width:{{windowWidth/3-15}}px;height:{{windowWidth/3-15}}px' bindtap="publishImage"></view>
+  </view>
+  <form bindsubmit='formSubmit'>
+    <view class='txt'>
+      <textarea name="summary" auto-height='true' placeholder='输入20字范围内的点评' maxlength='20'></textarea>
+    </view>
+    <view class='button'>
+      <button type='primary' form-type='submit'>提交</button>
+    </view>
+  </form>
+</view>

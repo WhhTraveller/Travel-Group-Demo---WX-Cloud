@@ -1,0 +1,34 @@
+<!--pages/userCenter/userInfo.wxml-->
+<view class='userInfo'>
+  <image class='bgImage' src='../../images/20180907143124.png' mode='aspectFill'></image>
+  <view class='info'>
+    <image class='avatar' src='../../images/201809071557.jpg' mode='aspectFill' wx:if="{{!userInfo}}"></image>
+    <image class='avatar' src='{{userInfo.avatarUrl}}' mode='aspectFill' wx:if="{{userInfo}}"></image>
+    <view class='name f32 fw fc3'>{{userInfo.nickName}}</view>
+    <view class='other f28 fc3 fw'>
+      <view>
+        点赞
+        <br/>{{gatherLikeTime}}
+      </view>
+      <view>
+        获赞
+        <br/>{{proviedLikeTime}}
+      </view>
+      <view>
+        游记
+        <br/>{{travelTime}}
+      </view>
+    </view>
+  </view>
+</view>
+<view class='itemList f32 fc9' wx:if="{{userInfo}}">
+  <view class='item'  bindtap='publishTravel'>
+    <image src='../../images/icon/pan.png' mode='aspectFill'></image>发布旅游圈
+  </view>
+  <view class='item'>
+    <image src='../../images/icon/map.png' mode='aspectFill'></image>我的旅游圈
+  </view>
+</view>
+<view class='f32 fc9' wx:if="{{!userInfo}}">
+  <button open-type='getUserInfo' bindgetuserinfo="getUserInfo" >点击开通个人中心</button>
+</view>

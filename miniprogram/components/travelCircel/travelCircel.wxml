@@ -1,0 +1,30 @@
+<!--components/travelCircel/travelCircel.wxml-->
+<template name="travelCircel">
+<view class='travelItem'>
+  <view class='itemTitle'>
+    <image src='{{item.User.AvatarUrl}}' mode='aspectFill'></image>
+    <view class='itemTitleTxt fc9'>
+      <view class='f28 fc3 fw'>{{item.User.WeiXinName}}</view>
+      <view class='f24'>{{item.User.Summary}}</view>
+    </view>
+  </view>
+  <scroll-view scroll-x class='itemScroll' wx:if="{{item.TravelPic}}">
+    <block wx:for="{{item.TravelPic}}" wx:for-item="travelPic" wx:key="travelPic._id">
+    <image mode='aspectFill' src='{{travelPic.PicSrc}}'></image>
+    </block>
+  </scroll-view>
+  <view class='itemSummary fw f32 fc3'>{{item.Summary}}</view>
+  <view class='itemAddTime f24 fc9'>{{item.AddTime}}</view>
+  <view class='itemBottom f24 fc9'>
+    <view class='itemBottomViewTime f24 fc9'>
+      <block wx:if="{{item.TravelLikeArray}}" wx:for="{{item.TravelLikeArray}}" wx:for-item="travelLike" wx:key="travelLike._id">
+        <image src='{{travelLike.AvatarUrl}}'></image>
+      </block>
+       + {{item.LikeTime}} 点赞
+    </view>
+    <view class='itemBottomOther'>
+      <image src='../../images/icon/commend.png' mode='aspectFill'></image>{{item.CommentTime}}
+    </view>
+  </view>
+</view>
+</template>

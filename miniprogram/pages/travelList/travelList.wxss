@@ -1,0 +1,8 @@
+/* pages/travelList/travelList.wxss */
+@import "../../components/travelCircel/travelCircel.wxss";
+.travelList{
+  background-color: #e2e2e2;
+}
+.travelList .more{
+  text-align: center;
+}

@@ -1,0 +1,26 @@
+/**index.wxss**/
+@import "../../components/travelCircel/travelCircel.wxss";
+.adInfo{
+  width:100%;
+  margin-bottom: 30rpx;
+}
+.adInfo swiper{
+  width:100%;
+  height: 240px;
+}
+.adInfo swiper image{
+  width:100%;
+}
+.hotTravelCircel{
+  width: 100%;
+  background-color:#fff;
+}
+.title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin:30rpx 30rpx 0rpx 30rpx;
+}
+.travelItem .itemBottom{
+  display: none;
+}

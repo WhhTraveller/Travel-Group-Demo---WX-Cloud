@@ -1,0 +1,38 @@
+{
+  "cloud": true,
+  "pages": [
+    "pages/indexNew/index",
+    "pages/travelList/travelList",
+    "pages/userCenter/userInfo",
+    "pages/userCenter/publishTravel/publishTravel"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "旅游圈",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/indexNew/index",
+        "text": "首页",
+        "iconPath":"images/icon/icon_API.png",
+        "selectedIconPath":"images/icon/icon_API_HL.png"
+      },
+      {
+        "pagePath": "pages/travelList/travelList",
+        "text": "旅游圈",
+        "iconPath": "images/icon/list.png",
+        "selectedIconPath": "images/icon/list1.png"
+      },
+      {
+        "pagePath": "pages/userCenter/userInfo",
+        "text": "我的",
+        "iconPath": "images/icon/icon_component.png",
+        "selectedIconPath": "images/icon/icon_component_HL.png"
+      }
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+<!--pages/travelList/travelList.wxml-->
+<import src="../../components/travelCircel/travelCircel.wxml" />
+<scroll-view class='travelList' scroll-y style='width:{{windowWidth}};height:{{windowHeight}};' bindscrolltolower="scrollToLower">
+  <block wx:for="{{travelInfoArray}}" wx:for-item="travel" wx:key="travel._id">
+    <template is="travelCircel" data="{{item:travel}}" />
+  </block>
+  <view class='more f28 fc3'>{{lowerText}}</view>
+</scroll-view>

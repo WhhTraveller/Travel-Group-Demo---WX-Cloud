@@ -1,0 +1,31 @@
+{
+	"miniprogramRoot": "miniprogram/",
+	"cloudfunctionRoot": "cloudfunctions/",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"appid": "wxd42f93fa57a7cc19",
+	"projectname": "%E6%97%85%E6%B8%B8%E5%9C%88%E5%BE%AE%E4%BF%A1%E4%BA%91%E5%BC%80%E5%8F%91",
+	"libVersion": "2.2.5",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		}
+	}
+}
