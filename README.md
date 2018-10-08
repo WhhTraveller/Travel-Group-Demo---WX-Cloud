@@ -20,4 +20,9 @@
 - [我的微信云开发学习笔记](https://blog.csdn.net/ningxi_/article/details/82952099)
 
 ### 欢迎项目介绍，微信号：xixi0769
-![测试图片](https://github.com/WhhTraveller/Travel-Group-Demo---WX-Cloud/blob/master/miniprogram/images/20180907142854.png)
+
+![效果图](https://github.com/WhhTraveller/Travel-Group-Demo---WX-Cloud/blob/master/miniprogram/images/20181008225946.png)
+![效果图](https://github.com/WhhTraveller/Travel-Group-Demo---WX-Cloud/blob/master/miniprogram/images/20181008230010.png)
+![效果图](https://github.com/WhhTraveller/Travel-Group-Demo---WX-Cloud/blob/master/miniprogram/images/20181008230033.png)
+![效果图](https://github.com/WhhTraveller/Travel-Group-Demo---WX-Cloud/blob/master/miniprogram/images/20181008230058.png)
+
