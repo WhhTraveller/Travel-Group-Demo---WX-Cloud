@@ -89,16 +89,20 @@ Page({
   //点击获取用户信息
   getUserInfo: function(e) {
     const self = this;
-    self.setData({
-      userInfo: e.detail.userInfo,
-    });
-    self.relatedUser();
+    console.log(e);
+    if (e.detail.userInfo) {
+      self.setData({
+        userInfo: e.detail.userInfo,
+      });
+      self.relatedUser();
+    }
   },
 
   //关联后端用户信息
   relatedUser: function() {
     console.log("relatedUser");
     const self = this;
+    console.log(self.data.userInfo);
     wx.cloud.callFunction({
       name: "relatedUser",
       data: {
@@ -106,7 +110,7 @@ Page({
       },
       success: res => {
         console.log(res);
-        self.getOtherInfo(res.result);
+        self.getOtherInfo(res.result._id);
       },
     });
   },
@@ -146,7 +150,7 @@ Page({
         console.log("循环开始");
         const tempFilePaths = res.tempFilePaths;
         let picArray = [];
-        const promise = new Promise((resolve,reject)=>{
+        const promise = new Promise((resolve, reject) => {
           let promiseArray = [];
           for (let i = 0; i < tempFilePaths.length; i++) {
             // (function (i) {
@@ -170,20 +174,20 @@ Page({
             console.groupEnd();
             // })(i)
           }
-          Promise.all(promiseArray).then(res=>{
+          Promise.all(promiseArray).then(res => {
             resolve(res)
           })
         });
-        promise.then(res=>{
-          for(let i=0;i<res.length;i++){
+        promise.then(res => {
+          for (let i = 0; i < res.length; i++) {
             picArray.push(res[i].fileID);
           }
-          app.globalData.picArray=picArray;
+          app.globalData.picArray = picArray;
           wx.hideLoading();
           wx.navigateTo({
             url: './publishTravel/publishTravel',
           });
-        }).catch(err=>{
+        }).catch(err => {
           console.log(err);
         });
       },

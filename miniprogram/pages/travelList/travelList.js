@@ -22,7 +22,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    const self=this;
+    const self = this;
     self.getTravelInfoArray(this.data.count, this.data.index);
   },
 
@@ -37,7 +37,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
-
+    
   },
 
   /**

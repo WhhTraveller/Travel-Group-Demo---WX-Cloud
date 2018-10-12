@@ -11,8 +11,8 @@ exports.main = async(event, context) => {
       IsDel: 0,
       _openid: openId
     }).get();
-    if (checkUser.data) {
-      db.collection("User").doc(checkUser.data[0]._id).update({
+    if (checkUser.data.length>0) {
+      await db.collection("User").doc(checkUser.data[0]._id).update({
         data: {
           WeiXinName: event.user.nickName,
           AvatarUrl: event.user.avatarUrl,
@@ -23,6 +23,7 @@ exports.main = async(event, context) => {
     } else {
       const addUser = await db.collection("User").add({
         data: {
+          _openid:event.userInfo.openId,
           WeiXinName: event.user.nickName,
           AvatarUrl: event.user.avatarUrl,
           IsDel: 0,
